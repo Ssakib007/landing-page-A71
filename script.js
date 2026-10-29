@@ -34,3 +34,33 @@
 
 
 
+/* ============================================
+   AREA71 FOOTER JAVASCRIPT
+============================================ */
+
+(function () {
+
+  function initializeArea71Footer() {
+
+    const yearElement = document.getElementById(
+      "a71-footer-year"
+    );
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initializeArea71Footer,
+      { once: true }
+    );
+  } else {
+    initializeArea71Footer();
+  }
+
+})();
+
