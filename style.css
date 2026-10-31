@@ -202,7 +202,7 @@
   --footer-text: #b6cec1;
   --footer-muted: #a8c0b5;
   --footer-accent: #64d4a0;
-  --footer-button: #059669;
+  --footer-button: #047857;
 
   width: 100%;
   background: var(--footer-bg);
@@ -468,7 +468,7 @@ a.a71-footer-contact-item:hover {
 }
 
 .a71-footer-consultation:hover {
-  background: #047857;
+  background: #046b4b;
   transform: translateY(-2px);
 }
 
