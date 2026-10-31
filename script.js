@@ -1,6 +1,6 @@
 (function(){
     'use strict';
-    document.getElementById('year').textContent = String(new Date().getFullYear());
+    
     var inputIds=['price','landed','fba','referral','ads','other','units'];
     var usd=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
     var usdc=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',minimumFractionDigits:2,maximumFractionDigits:2});
@@ -63,4 +63,3 @@
   }
 
 })();
-
