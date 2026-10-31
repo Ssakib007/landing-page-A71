@@ -24,13 +24,9 @@
   })();
   function closeMenu(){var menu=document.getElementById('mobile-menu'),btn=document.getElementById('menu-btn');menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';}
   function toggleMenu(){var menu=document.getElementById('mobile-menu'),btn=document.getElementById('menu-btn');var open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));btn.textContent=open?'×':'☰';}
-  var editing=false;
-  function toggleEdit(){editing=!editing;document.body.classList.toggle('edit-active',editing);document.querySelectorAll('[data-editable]').forEach(function(el){if(editing){el.setAttribute('contenteditable','true');el.setAttribute('spellcheck','false');}else{el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');}});var btn=document.getElementById('edit-toggle');btn.textContent=editing?'✓ Quick-Edit: ON':'✎ Quick-Edit: OFF';btn.setAttribute('aria-pressed',String(editing));}
-  function exportCleanHTML(){
-    if(editing)toggleEdit();
-    var clone=document.documentElement.cloneNode(true);var bar=clone.querySelector('#admin-bar');if(bar)bar.remove();clone.querySelectorAll('[data-editable]').forEach(function(el){el.removeAttribute('data-editable');el.removeAttribute('contenteditable');el.removeAttribute('spellcheck');});clone.querySelector('body').classList.remove('edit-active');
-    var html='<!DOCTYPE html>\n'+clone.outerHTML;var blob=new Blob([html],{type:'text/html;charset=utf-8'});var url=URL.createObjectURL(blob);var link=document.createElement('a');link.href=url;link.download='area71-mps-production.html';document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url);},2000);
-  }
+
+  
+  
 
 
 
